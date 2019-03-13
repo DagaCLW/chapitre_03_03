@@ -8,6 +8,8 @@
 <%@page import="java.time.format.DateTimeFormatter"%>
 <%@page import="java.time.LocalDate"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+
+<%@include file="entete.html"  %>
 <!DOCTYPE html>
 <html>
     <head>
