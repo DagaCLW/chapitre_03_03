@@ -4,6 +4,9 @@
     Author     : Utilisateur
 --%>
 
+<%@page import="java.util.Locale"%>
+<%@page import="java.time.format.DateTimeFormatter"%>
+<%@page import="java.time.LocalDate"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -20,8 +23,14 @@
         <%!
             String prenomTitre="Prénom";
             String nomTitre="NOM";
+            String aujourdhui(){
+                LocalDate ld = LocalDate.now();{
+                return ld.format(DateTimeFormatter.ofPattern("dd MM yyyy", Locale.FRANCE));
+            }
+        }
         %>
             <h1>Utilisateur connecté : <%= request.getSession().getAttribute("utilisateur") %></h1>
+            <h2><%=aujourdhui() %></h2>
             <%
                 if (request.getMethod().equals("GET")) {
 
