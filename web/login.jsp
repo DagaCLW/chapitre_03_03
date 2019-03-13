@@ -8,6 +8,8 @@
 
 <%@include file="entete.html"  %>
 
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %> 
+
 <!DOCTYPE html>
 <html>
     
@@ -22,6 +24,9 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Login JSP Page</title>
     </head>
+    
+    <c:set var="compteur" value="42"/>
+    
     <body>
         <h1>Vérification de l'utilisateur</h1>
         <%
